@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="naver" >
+        <div class="container">
+            <div class="logo">
+                ANIL<span>REDDY</span>
+            </div>
+      
+        <div class="links">
+            <div class="link"><a href="">Home</a></div>
+            <div class="link"><a href="#about">About</a></div>
+            <div class="link"><a href="#MyWork">Mywork</a></div>
+            <div class="link"><a href="#contacts">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg"></i>
+ 
+        <div class="dropdown" id="drop">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Skils</a>
+                <a href="">services</a>
+                <i class="fa-solid fa-xmark cancel"></i>
+            </div>
+        </div>
+   
+    </nav>
+    <section class="section">
+        <div class="image-container">
+            <img class="img" src="./image.jpg"/>
+        </div>
+        <div class="main-container">
+            <h1>Hello,i am <span>Anil</span></h1>
+            <div class="typewrite">i'm a <span class="inner">webdeveloper</span></div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h1>About</h1>
+        <div class="content">
+            <div>
+                <img src="./anils.jpg"/>
+            </div>
+
+        <div class="abouts">
+          <P>My dedication to web development is driven by a genuine love for crafting engaging digital experiences and a keen eye for detail. Though I am just starting my professional journey, I am committed to leveraging my skills to contribute effectively and bring fresh, creative ideas to the table.</P>
+
+           <P> I am eager to connect with professionals in the industry, seek mentorship, and explore opportunities to collaborate on innovative web projects. Let’s connect and discuss how we can work together to build the web of tomorrow!</P>
+         <a id="skil">skils</a>
+         <a id="detail">education</a>
+         <a id="Experience">Experience</a>
+         <div class="infor">
+
+         </div>
+        
+        </div>
+        </div>
+      
+
+    </section>
+
+    <section class="Mywork" id="MyWork">
+        <h1>MyWork</h1>
+        <div class="projects">
+            <div class="weather">
+                <img class="indicate" src="./weatherproject.jpg" />
+                <div class="overlaa">
+                  <h1>By Using this website we can see current current weather details and we navigate by our current location</h1>
+                  <button class="btns"><a href="https://anil7425.github.io/laughing-couscous/">projectlink</a></button>
+                </div>
+            </div>
+            <div class="student">
+                <img class="indicate" src="./student-projects.png" />
+                <div class="overlays">
+                    <h1>By Using this website we can see our details filled in input fiels appeared on right side</h1>
+                    <button class="btns"><a href="https://anil7425.github.io/refactored-doodle/">projectlink</a></button>
+                  </div>
+            </div>
+            <div class="quiz">
+                <img class="indicate" src="./quiz_img.webp" />
+                <div class="overlay">
+                    <h1>By Using this website we can see current current weather details and we navigate by our current location</h1>
+                    <button class="btns"><a href="https://anil7425.github.io/refactored-doodle/">projectlink</a></button>
+                  </div>
+            </div>
+           
+        </div>
+        <a href="https://github.com/ANIL7425/"><button class="show_btn">show all</button></a>
+
+    </section>
+
+
+    <section class="contact" id="contacts">
+        <div class="contains">
+
+      
+      <div>
+        <h1>CONTACT ME</h1>
+        <div><i class="fa-solid fa-message post"> reddyanil5829@gmail.com</i></div>
+        <div><i class="fa-solid fa-phone"> 8639077816</i></div>
+        <div class="icons">
+        <a href="https://www.linkedin.com/in/abbadi-anil-reddy-a14493317/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/ANIL7425/"><i class="fa-brands fa-github"></i></a>
+        
+        <i class="fa-solid fa-x"></i>
+    </div>
+      </div>
+      <div class="mail">
+        <form name="submit-to-google-sheet">
+           <input type="text" name="Name" placeholder="your Name" required>
+           <input type="text" name="Email" placeholder="your Email" required>
+           <textarea type="text" name="Message" placeholder="your Message"></textarea>
+           <button id="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyBvj_wRLBwPezS3mACLVIXtLGO66Qrd53lXjAV9UEW3x5qxb760eW_Q0_j_Rv4eclH/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("message recived"))
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+        })
+        
+      </script>
+
+    <script src="./script.js"></script>
+</body>
+</html>
